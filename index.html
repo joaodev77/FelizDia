@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feliz Aniversário!</title>
+  <style>
+
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff66a3;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .bolo {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .bolo img {
+      width: 180px;
+      height: auto;
+    }
+
+    .mensagem {
+      margin: 20px auto;
+      max-width: 90%;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .instagram-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 90%;
+      margin: 30px auto;
+    }
+
+    .insta-post {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .insta-header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .insta-header img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .insta-header span {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .insta-post img.main-photo {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .insta-caption {
+      padding: 12px 15px;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .spotify-section {
+      background: #121212;
+      color: white;
+      padding: 30px 20px;
+    }
+
+    .spotify-section h2 {
+      color: #1db954;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .track {
+      display: flex;
+      align-items: center;
+      background: #1e1e1e;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .track img {
+      width: 60px;
+      height: 60px;
+      border-radius: 6px;
+      margin-right: 15px;
+    }
+
+    .track-info h4 {
+      margin: 0;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .track-info p {
+      margin: 0;
+      font-size: 13px;
+      color: #bbb;
+    }
+
+    .track a {
+      color: #1db954;
+      margin-left: auto;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .track {
+        flex-direction: column;
+        text-align: center;
+      }
+      .track img {
+        margin-bottom: 10px;
+      }
+      .track a {
+        margin-left: 0;
+        margin-top: 5px;
+      }
+    }
+
+    /* Fundo com gradiente animado */
+body {
+  background: linear-gradient(-45deg, #ffdde1, #ee9ca7, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  cursor: url('https://cdn-icons-png.flaticon.com/512/833/833472.png'), auto; /* Cursor de coração */
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Confetes animados */
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  background-color: pink;
+  opacity: 0.8;
+  animation: fall linear infinite;
+  z-index: 999;
+}
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+/* Corações flutuando */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 50% 75%, 18% 100%, 0% 38%);
+  animation: floatUp 10s linear infinite;
+  opacity: 0.6;
+  z-index: 999;
+}
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+}
+
+/* Balões flutuantes */
+.balao {
+  position: fixed;
+  bottom: -100px;
+  width: 40px;
+  height: 60px;
+  background: radial-gradient(circle at 50% 40%, #ff69b4 40%, #d147a3 100%);
+  border-radius: 50% 50% 45% 45%;
+  animation: subirBalao linear infinite;
+  z-index: 998;
+}
+.balao::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  width: 2px;
+  height: 20px;
+  background: #555;
+  transform: translateX(-50%);
+}
+
+@keyframes subirBalao {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+/* Brilho suave no bolo */
+.bolo img {
+  animation: pulse 3s infinite;
+  box-shadow: 0 0 20px #ff8eb5;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 10px #ff8eb5; }
+  50% { box-shadow: 0 0 30px #ff8eb5; }
+  100% { box-shadow: 0 0 10px #ff8eb5; }
+}
+
+/* Fade-in para textos e imagens */
+.mensagem, .insta-post, .spotify-section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1.5s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Luz de vela simulada */
+.bolo {
+  position: relative;
+}
+.bolo::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255,248,204,0.5), transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: candleGlow 2s ease-in-out infinite;
+  z-index: -1;
+}
+@keyframes candleGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Botão surpresa */
+.surpresa-btn {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 24px;
+  background-color: #ff66a3;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  animation: fadeIn 1.5s ease forwards;
+}
+.surpresa-mensagem {
+  display: none;
+  text-align: center;
+  margin: 20px;
+  font-size: 18px;
+  color: #ff1493;
+}
+
+  </style>
+</head>
+<!-- Botão de surpresa -->
+<button class="surpresa-btn" onclick="mostrarMensagem()">🎁 Clique para ver uma surpresa 🎁</button>
+<div class="surpresa-mensagem" id="surpresa">
+  O aniversario eh seu mas você é o melhor presente que a vida poderia me dar ❤️
+</div>
+
+<!-- Confetes e corações (multiplicação dinâmica) -->
+<script>
+  // Função para gerar elementos animados
+  function gerarElementos(tipo, classe, quantidade, velocidadeMin, velocidadeMax) {
+    for (let i = 0; i < quantidade; i++) {
+      let el = document.createElement("div");
+      el.classList.add(classe);
+      el.style.left = Math.random() * 100 + "vw";
+      el.style.animationDuration = (Math.random() * (velocidadeMax - velocidadeMin) + velocidadeMin) + "s";
+      document.body.appendChild(el);
+    }
+  }
+
+  gerarElementos("confetti", "confetti", 30, 4, 8);
+  gerarElementos("heart", "heart", 10, 6, 12);
+  gerarElementos("balao", "balao", 8, 8, 16);
+
+
+  // Mensagem surpresa
+  function mostrarMensagem() {
+    document.getElementById("surpresa").style.display = "block";
+  }
+</script>
+
+<body>
+
+  <!-- Música de fundo -->
+  <audio autoplay loop>
+    <source src="sailor-song.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <header>
+    <h1>🎉🎂 HAPPY BIRTHDAY 🎂🎉</h1>
+  </header>
+
+  <!-- Bolo com vela de 28 anos -->
+  <div class="bolo">
+    <img src="imagens/28.webp" alt="">
+  </div>
+
+  <!-- Mensagem Romântica -->
+  <div class="mensagem">
+    <p>❤️❤️❤️❤️❤️❤️ Hoje é o grande dia de celebrar a vida da gatinha mais linda, especial e incrível desse mundo! Sou muito grato por ter você na minha vida iluminando meus dias com cada sorriso, sendo apaixonante com o seu jeitinho simples e meigo, além de fazer os meus dias cada vez mais felizes. Quero te desejar as melhores coisa desse mundo, que papai do ceu continue derramando bencaos na sua vida e te iluminando muito, te desejo muita paz, saude e alegrias! Aproveite muito seu dia pq voce merece tudo de melhor. Amo muito voce e amo muito a sua vida, conte sempre comigo!❤️❤️❤️❤️❤️❤️ </p>
+  </div>
+
+  <!-- Estilo Instagram - Fotos -->
+  <section class="instagram-feed">
+
+    <div class="insta-post">
+      <div class="insta-header">
+        <img src="imagens/perfil.jpg" alt="perfil">
+        <span>@camila_cardoso</span>
+      </div>
+      <img src="imagens/com dog.jpg" class="main-photo" alt="Foto com cachorro">
+      <div class="insta-caption">continue sendo essa mulher incrível que encanta com esse jeitinho doce e que todo mundo ama, incluindo seu dog kk!❤️</div>
+    </div>
+
+    <div class="insta-post">
+      <div class="insta-header">
+        <img src="imagens/perfil.jpg" alt="perfil">
+        <span>@camila_cardoso</span>
+      </div>
+      <img src="imagens/estudando.jpg" class="main-photo" alt="Foto estudando">
+      <div class="insta-caption">sempre sendo motivo de orgulho pra todos! determinada e correndo atrás dos seus objetivos.❤️</div>
+    </div>
+
+    <div class="insta-post">
+      <div class="insta-header">
+        <img src="imagens/perfil.jpg" alt="perfil">
+        <span>@camila_cardoso</span>
+      </div>
+      <img src="imagens/provador.jpg" class="main-photo" alt="Provador">
+      <div class="insta-caption">mantendo esse seu jeitinho doce e meigo de sempre!❤️</div>
+    </div>
+
+    <div class="insta-post">
+      <div class="insta-header">
+        <img src="imagens/perfil.jpg" alt="perfil">
+        <span>@camila_cardoso</span>
+      </div>
+      <img src="imagens/turista.jpg" class="main-photo" alt="Turista">
+      <div class="insta-caption">vivendo a vida e aproveitando cada segundo.❤️</div>
+    </div>
+
+    <div class="insta-post">
+      <div class="insta-header">
+        <img src="imagens/perfil.jpg" alt="perfil">
+        <span>@camila_cardoso</span>
+      </div>
+      <img src="imagens/f1.jpg" class="main-photo" alt="f1">
+      <div class="insta-caption">e sempre fumando um pra relaxar.❤️</div>
+    </div>
+
+  </section>
+
+  <!-- Músicas estilo Spotify -->
+  <section class="spotify-section">
+  <h2>🎵 algumas musiquinhas que me lembram você 🎵</h2>
+
+  <div class="track">
+    <img src="https://i.scdn.co/image/ab67616d00001e02c7cf80f3b147b5b40e5a709c" alt="Chest Pain">
+    <div class="track-info">
+      <h4>Chest Pain (i love)</h4>
+      <p>Malcolm Todd</p>
+    </div>
+    <a href="https://open.spotify.com/track/0RzYqT9mKHPXhU6RxA4u1y" target="_blank">Ouvir</a>
+  </div>
+
+  <div class="track">
+    <img src="https://i.scdn.co/image/ab67616d00001e02a30ab7ad84ebee4cd63784a6" alt="Ape 1001">
+    <div class="track-info">
+      <h4>Ape 1001</h4>
+      <p>BIN, Ludmilla</p>
+    </div>
+    <a href="https://open.spotify.com/track/6GRUOP2PbRibnH7JgdLwQU" target="_blank">Ouvir</a>
+  </div>
+
+  <div class="track">
+    <img src="https://i.scdn.co/image/ab67616d00001e02f5e7057fefecf6c3286d3f6f" alt="Que Sorte a Nossa">
+    <div class="track-info">
+      <h4>Que Sorte a Nossa</h4>
+      <p>Matheus & Kauan</p>
+    </div>
+    <a href="https://open.spotify.com/track/6ufhHEgO6iZxHepH7qU3lN" target="_blank">Ouvir</a>
+  </div>
+
+  <div class="track">
+    <img src="https://i.scdn.co/image/ab67616d00001e027f7f9b755f9ce50b6b0be09e" alt="Mãe Solteira">
+    <div class="track-info">
+      <h4>Mãe Solteira</h4>
+      <p> J.Eskine, MC Davi, MC G15, DG e Batidão Stronda (GR6 Explode)</p>
+    </div>
+    <a href="https://open.spotify.com/track/4e5hWvuZDxNyP6nAekyT3n" target="_blank">Ouvir</a>
+  </div>
+
+  <div class="track">
+    <img src="https://i.scdn.co/image/ab67616d00001e027e421ff179f17088207cd8a1" alt="Ilusão de Ótica">
+    <div class="track-info">
+      <h4>Ilusão de Ótica</h4>
+      <p>Matheus & Kauan</p>
+    </div>
+    <a href="https://open.spotify.com/track/3S0kJSkS38iEIQmQQyn1Tw" target="_blank">Ouvir</a>
+  </div>
+
+  <div class="track">
+    <img src="https://i.scdn.co/image/ab67616d00001e02ecb2e50f9bc03766a7cf49b4" alt="Tubarões e Entregador de Flor">
+    <div class="track-info">
+      <h4>Tubarões</h4>
+      <p>Diego & Victor Hugo</p>
+    </div>
+    <a href="https://open.spotify.com/track/4ZjXmGbRMXZIRnK77olw2K" target="_blank">Ouvir</a>
+  </div>
+
+   <div class="track">
+    <img src="https://i.scdn.co/image/ab67616d00001e02ecb2e50f9bc03766a7cf49b4" alt="Entregador de Flor">
+    <div class="track-info">
+      <h4>Entregador de flor</h4>
+      <p>Diego & Victor Hugo</p>
+    </div>
+    <a href="https://open.spotify.com/track/4ZjXmGbRMXZIRnK77olw2K" target="_blank">Ouvir</a>
+  </div>
+</section>
+
+
+</body>
+</html>
